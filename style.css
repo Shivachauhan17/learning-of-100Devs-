@@ -6,6 +6,8 @@ where does css go
                     using <link rel="stylesheet" type="text/css"  href="css/style.css>
 */
 
+/*----------------COLOR-----------------*/
+
 /* choose a html element using its tag name
 This whole thing with 'p' in curly braces called 'Rule' */
 p{  /*declaration block*/
@@ -16,3 +18,62 @@ p{  /*declaration block*/
 /* Css is read top to bottom , what comes below can override 
 what comes above, this is called 'Cascade' */
  
+
+/*there are four ways to providing a value to color keyword
+1.word : exp->red ,green
+2.Hex: by providing a hexadecimal number
+3.RGBa: red green blue alpha(defines opacity between 0-1)
+4.Hsla: hue(defines degree on the color circle) 
+        saturation lightness alpha
+*/
+h1{
+    color:#f8f9fa;
+}
+
+h2{
+    color:rgba(100,200,250,1);
+}
+
+h3{
+    color:hsla(120,17%,55%,0.5);
+}
+
+
+/*---------------------FONT FAMILY------------------*/
+
+/*changing type of text 
+Tip-> you can use new font family using google fonts
+    by puting it into link tag 
+    exp-> <link href="link here"> */
+
+h2{
+    /*giving multiple fonts is for fallback if in a browser one font don't work it will try another.*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*--------------------FONT WEIGHT-------------------*/
+/*font weight holds the bold ness*/
+h2{
+    font-weight: 1000;
+}
+
+
+/*----------practice css ---------------*/
+
+h4{
+    color: blue;
+    text-decoration: underline;
+    background: gold;
+}
+
+#task2{
+    color: purple;
+    font-weight: bold;
+    font-size: 25px;
+    border:solid 1px orange;
+
+}
+
+
+
