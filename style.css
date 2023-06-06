@@ -1,0 +1,18 @@
+/*
+where does css go
+1.inline -> in html tags using style attribute
+2.head-> in <head></head> tag
+3.In seprate file -> write css code in seprate file and then connect it 
+                    using <link rel="stylesheet" type="text/css"  href="css/style.css>
+*/
+
+/* choose a html element using its tag name
+This whole thing with 'p' in curly braces called 'Rule' */
+p{  /*declaration block*/
+    color: red; /*declaration*/
+    font-weight: bold;
+}
+
+/* Css is read top to bottom , what comes below can override 
+what comes above, this is called 'Cascade' */
+ 
