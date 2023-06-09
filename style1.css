@@ -70,7 +70,7 @@ h4{
 }
 
 /*Make this text purple, bolded, 25px, and have an orage border*/
-#task2{
+h4+h2{
     color: purple;
     font-weight: bold;
     font-size: 25px;
@@ -130,6 +130,9 @@ section>h2{
 section h3{
     color: blueviolet;
 }
+
+/*NOTE : difference in selection by relation number 1 and 2 is , using 1st 
+        only direct child can be selected, using 2nd all element of name inside parent are selected */
 
 /* Exception in cascade proecss the rule that come blow must 
 same or greater specificity.
