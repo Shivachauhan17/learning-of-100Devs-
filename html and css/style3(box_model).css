@@ -1,0 +1,22 @@
+/*make only Rhino and Zebra blue*/
+.fourLegs{
+    color: blue;
+}
+
+/*make only hufflepuff gold*/
+.badger{
+    color: gold;
+}
+
+/*select duck with the higest level of specificity possible*/
+/*this is just for preactice never use it in production*/
+/*article have class 'areDuckDinasours' and h2 have
+class likeToQuack and class fight10r100*/
+
+html body h1#hi+section.top+section.middle+
+article.areDuckDinasours h2.likeToQuack.fight10r100{
+    color:aqua !important;
+}
+
+
+  

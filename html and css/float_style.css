@@ -1,0 +1,40 @@
+
+/*-----------------------LAYOUT----------------*/
+/* 1.Floats : if you float content, it will try as hard 
+it can go into a specific corner
+exp: if you float content left it will gonna go all the way left
+and up ,untilit hits other element
+exp: if floated to right, all the way right and all the way up
+,until it hits the other element*/
+/*let i have a header,footer and let in middle i have three
+sections and i want them to be next to each other and equal?
+for that width need to be 33% and then float them to the left*/
+
+/*.sections{
+    height:200px;
+    width:33%;
+    border:1px solid red;
+    float: left;
+
+}*/
+
+/*trouble in upper code : 33% of every box + if border  it will
+gonna go out of 100% to solve this we have a box model hack
+but margin padding still create problem7 */
+*{
+    box-sizing: border-box;
+}
+.sections{
+    height:200px;
+    width:33.3333%;
+    border:5px solid red;
+    float: left;
+}
+/*when i have floated all three sections off the page 
+the footer comes after the header solved using 
+property 'clear:both'*/
+header,footer{
+    height: 100px;
+    border:3px solid magenta;
+    clear:both;
+}

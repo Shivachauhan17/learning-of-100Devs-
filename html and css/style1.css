@@ -138,5 +138,8 @@ section h3{
 same or greater specificity.
 specifity sequence for different selector
         [Tags < classes < Ids < other inline style ]
+
+
+
 to make a declaration able to never be overwritten 
-use '!important' after value with a whitespace*/
+use '!important'(bang impor  tant) after value with a whitespace*/

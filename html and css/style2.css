@@ -35,3 +35,15 @@ footer{
 h2{
     text-decoration:white line-through;
 }
+
+
+/*---------------IDS--------------------*/
+/*uunique identifier , one id assigned only to one element
+, each element can only have one id, if used once cannot be used again*/ 
+
+/*--------------CLASSES------------------*/
+/*classes are for selecting multiple elements 
+multiple with the same value allowed per documnt,
+a Html element can have more than one class*/
+
+
