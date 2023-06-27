@@ -1,0 +1,54 @@
+/*
+There are three things in responsive sites
+1.fluidity
+2.elastic
+3.content decision
+
+1.Fluidity - when everything is in a percentage.
+2.Elastic - setting our fonts and texts to using responsive unit of measure.
+   Ems and rem 
+   ems gets their font size from their closest parent elements
+   rem(root em's ), they only get their size from html element
+3.Content Decisions - what content of website we want to show on different
+devices.
+ "media queries" can change the content decisions
+*/
+
+*{
+    box-sizing: border-box;
+}
+header,footer{
+    height: 50px;
+    width:100px;
+    border: 1px solid black;
+    clear: both;
+}
+
+section{
+    width: 20%;
+    height:200px;
+    border:2px solid green;
+}
+.thickone{
+    width: 40%;
+    border:2px solide red;
+}
+
+
+@media screen and (max-width:600px){
+    section{
+        background-color: aqua;
+        float: left;
+    }
+}
+
+@media (min-width:700px) and (max-width:800px){
+    section{
+        background-color: brown;
+        float: left;
+    }
+    .thickone{
+        display: none;
+    }
+}
+
