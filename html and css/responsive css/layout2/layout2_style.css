@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+header>*{
+    width: 20%;
+    float: left;
+    margin-left: 2%;
+}
+header a{
+    width: 25%;
+    float: left;
+    margin-left: 7%;
+}
+main>div{
+    width: 50%;
+    float: left;
+}
+main a{
+    width: 20%;
+    float:left;
+}
