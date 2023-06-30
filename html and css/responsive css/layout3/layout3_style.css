@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    background:black;
+    height:20px;
+}
+header>img{
+    width:7%;
+    height:35px;
+}
+header>img+nav>a{
+    width: 10%;
+    margin-left: 30px;
+}
+header>img+nav+nav{
+    width:60%;
+}
+input{
+    margin-left:300px;
+}
+nav>a{
+    margin: left 10px;
+    color:white;
+}
+nav{
+    margin: left 15px;
+}
+
+header>img,nav *{
+    float:left;
+}
+header>img+nav+nav>a{
+    margin-left:15px;
+    margin-right: 20px ;
+}
+h2{clear:both;}
+
+section{
+    height:300px;
+}
+.first-row1,.first-row2{
+    width:50%;
+    float: left;
+}
+.first-row1{
+    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.defenceguru.co.in%2FDF%2FAdmin%2Fpages%2FPDD%2F20-international-news-2022-for-ssb-interview.jpg&tbnid=HaIwNFyDrj_eKM&vet=12ahUKEwjT4aqhuuv_AhVVpekKHSiAAIwQMyg9egUIARCBAQ..i&imgrefurl=https%3A%2F%2Fwww.defenceguru.co.in%2Ffree-study-material%2F20-latest-2022-international-news-for-ssb-interview&docid=-Mm0u5HoPLPgKM&w=848&h=420&q=international%20news&ved=2ahUKEwjT4aqhuuv_AhVVpekKHSiAAIwQMyg9egUIARCBAQ");
+}
+.first-row2>section{
+    width:50%;
+    height: 150px;
+    float: left;
+}
+
+.second-row>section{
+    width:33%;
+    float:left;
+}
+.second-row img{
+    width:80%;  
+}
+section{
+    border:1px solid red;
+}
