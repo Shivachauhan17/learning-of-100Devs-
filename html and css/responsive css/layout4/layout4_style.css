@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
+section.grey{
+    background: rgb(61, 61, 61);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height:500px;
+}
+h1{
+    font-size: 40px;
+    clear: both;
+    margin-top:100px;
+}
+
+header *{
+    width: 20%;
+    float: left;
+    color:white;
+    margin-left: 150px;
+    height: 25px;
+}
+header>input{
+    width:20%;
+}
+header>a{
+    margin-left: 20px;
+}
+
+
+section.grey+section{
+    height: 400px;
+    width: 100% ;
+}
+
+section.grey+section>p ,h1{
+    text-align: center;
+}
+.contain-more{
+    width: 100%;
+    background: grey;
+    height:500px;
+}
+.contain-more>section{
+    width:50%;
+    float: left;
+    text-align: center;
+    color:white;
+}
+.contain-more video{
+    margin-top: 50px;
+}
+
+.contain-more+section{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
