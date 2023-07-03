@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+img{
+    height: 250px;
+    width:20%;
+}
+ul{
+    list-style: none;
+}
