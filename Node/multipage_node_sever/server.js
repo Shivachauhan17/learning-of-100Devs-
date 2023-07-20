@@ -65,8 +65,8 @@ const server = http.createServer((req,res) => {
             res.end()
         })
     }
-    else if(page == '//index.js'){
-        fs.readFile('/home/shiva1974/Desktop/learning-of-100Devs-/Node/multipage_node_sever/server.js', (error,data) => {
+    else if(page == '/index.js'){
+        fs.readFile('/home/shiva1974/Desktop/learning-of-100Devs-/Node/multipage_node_sever/index.js', (error,data) => {
             res.writeHead(200, {'Content-Type' : 'text/javascript'})
             res.write(data)
             res.end()
