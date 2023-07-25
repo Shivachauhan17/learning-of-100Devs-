@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="rappers" >
+        <% for(let i=0;i<info.length;i++){%>
+            <li class="rapper">
+                <span><% info[i].stageName %></span>
+                <span><% info[i].birthName %></span>
+                <span><% info[i].likes %></span>
+                <i class="fa fa-thumbs-up" ></i>
+                <i class="fa fa-trash" ></i>
+            </li>
+            <%} 
+        %>
+    </ul>
+    <h1>add a rapper</h1>
+    <form action="/addRapper" method="POST">
+        <input type="text" placeholder="Stage Name" name="stageName">
+        <input type="text" placeholder="Birth Name" name="birthName">
+        <input type="submit">
+    </form>
+</body>
+</html>
