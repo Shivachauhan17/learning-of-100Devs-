@@ -1,17 +1,19 @@
 const deleteText = document.querySelectorAll('.fa-trash')
 const thumbText = document.querySelectorAll('.fa-thumbs-up')
 
-Array.from(deleteText).array.forEach(element => {
-    element.addEventListner('click',deleteRapper)
+Array.from(deleteText).forEach(element => {
+    element.addEventListener('click',deleteRapper)
 })
 
-Array.from(thumbText).array.forEach(element=>{
-    element.addEventListner('click',addLike)
+Array.from(thumbText).forEach(element=>{
+    element.addEventListener('click',addLike)
 })
 
 async function deleteRapper(){
     const sName=this.parentNode.childnode[1].innerText
     const bName=this.parentNode.childnode[2].innerText 
+    console.log(sName)
+    console.log(bName)
     try{
         const response = await fetch('deleteRapper',{
             'method':'delete',
@@ -31,18 +33,18 @@ async function deleteRapper(){
 }
 
 async function addLike(){
-    const sName=this.parentNode.childnode[1].innerText
-    const bName=this.parentNode.childnode[2].innerText 
-    const tlikes=Number(this.parentNode.childnode[4].innerText)
+    const sName=this.parentNode.childNodes[1].innerText
+    const bName=this.parentNode.childNodes[2].innerText 
+    const tlikes=Number(this.parentNode.childNodes[4].innerText)
     try{
-        const response=fetch('addOneLike',{
+        const response= await fetch('addOneLike',{
             method:'put',
             headers:{'Content-Type':'application/json'},
-            body:{
+            body: JSON.stringify({
                 'stageNameS':sName,
                 'birthNameS':bName,
                 'likesS':tlikes
-            }
+            })
         })
         const data=(await response).json()
         console.log(data)
