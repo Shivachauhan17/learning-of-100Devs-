@@ -6,7 +6,7 @@ require('dotenv').config()
 
 
 let db,
-    dbConnectionStr ='mongodb+srv://Shivachauhan17:bobthebuilder@cluster0.mz5u2w1.mongodb.net/?retryWrites=true&w=majority  ',
+    dbConnectionStr = process.env.DB_STRING,
     dbName = "farmer-crop"
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
@@ -42,14 +42,17 @@ app.post('/addRapper',(request,response)=>{
 })
 
 app.put('/addOneLike',(request,response)=>{
-    db.collection('rappers').updateOne({stageName:request.body.stageNames,
+    console.log(request.body.stageNameS)
+    console.log(request.body.birthNameS)
+    console.log(request.body.likesS)
+    db.collection('rappers').updateOne({stageName:request.body.stageNameS,
     birthName:request.body.birthNameS,likes:request.body.likesS
     },{$set:{
         likes:request.body.likesS+1,
     }}
     ,{
         sort:{id:-1},
-        upsert:false 
+        upsert:true
     })
     .then(result=>{
         console.log('added one like')
@@ -59,7 +62,10 @@ app.put('/addOneLike',(request,response)=>{
 })
 
 app.delete('/deleteRapper',(request,response)=>{
-    db.collection('rappers').deleteOne({stageName: request.body.stageName})
+    console.log(request.body.stageNameS)
+    console.log(request.body.birthNameS)
+    db.collection('rappers').deleteOne({stageName:request.body.stageNameS,
+        birthName:request.body.birthNameS})
         .then(result=>{
             console.log('deleted')
             response.json('Rapper Deleted')
