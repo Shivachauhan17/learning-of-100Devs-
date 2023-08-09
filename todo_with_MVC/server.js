@@ -1,12 +1,12 @@
 const express=require('express')
 const app=express()
-//const connectDB=require('./config/databse')
+const connectDB=require('./config/database')
 const homeRoutes=require('./routes/home')
 const todoRoutes=require('./routes/todos')
 
-//require('dotenv').config({path:'./config/.env'})
+require('dotenv').config({path:'./config/.env'})
 
-//connectDB()
+connectDB()
 
 app.set('view engine','ejs')
 app.use(express.static('public'))
