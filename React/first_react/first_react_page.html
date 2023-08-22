@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/first_react_page.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+    function MyButton() {
+    return (
+        <button>
+            press me 
+       </button>
+    );
+    }
+
+    function MyApp() {
+    return (
+        <div>
+        <h1 className="enjoy" >ejoy to press button that what all i have for now</h1>
+        <MyButton />
+        </div>
+    );
+    }
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<MyApp />);
+
+    </script>
+
+  </body>
+</html>

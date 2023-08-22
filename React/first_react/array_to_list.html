@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/array_to_list.css"> -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    const products=[
+        {title:"cabbage",idFruit:false,id:1},
+        { title: 'Garlic', isFruit: false, id: 2 },
+        { title: 'Apple', isFruit: true, id: 3 },
+    ]
+
+    function ShoppingList(){
+        const listItems=products.map(el=>
+        <li key={el.id}
+            style={{
+                color:el.isFruit?"green":"blue"
+            }
+            }>{el.title}
+            </li>
+        )
+          console.log(listItems)
+        return(
+            <ul>{listItems}</ul>
+        )
+    }
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<ShoppingList />);
+
+    </script>
+
+  </body>
+</html>

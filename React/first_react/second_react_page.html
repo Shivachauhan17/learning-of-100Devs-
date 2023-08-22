@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/second_react_page.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const user = {
+        name: 'Hedy Lamarr',
+        imageUrl: 'https://imgs.search.brave.com/wVLaLXU6sQmImTExBRHtMSnsWEaiYxDcB1MKyrENgxk/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9pLmt5/bS1jZG4uY29tL2Vu/dHJpZXMvaWNvbnMv/b3JpZ2luYWwvMDAw/LzAzMS85OTQvU2Ny/ZWVuX1Nob3RfMjAx/OS0xMi0wMl9hdF8x/MS4yMy4wMV9BTS5w/bmc',
+        imageSize: 90,
+        };
+        //export default 
+        function Profile() {
+        return (
+            <>
+            <h1>{user.name}</h1>
+            <img
+                className="avatar"
+                src={user.imageUrl}
+                alt={'Photo of ' + user.name}
+                style={{
+                width: user.imageSize,
+                height: user.imageSize
+                }}
+            />
+            </>
+        );
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<Profile />);
+
+    </script>
+
+  </body>
+</html>
